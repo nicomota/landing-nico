@@ -1,148 +1,176 @@
 <!-- HEADER -->
 <header class="header">
   <div class="container">
-      <div class="logo">🧾 Logo <strong>Logo1</strong></div>
-      <nav>
-          <ul class="nav-links">
-              <li><a href="#solucao">Solução</a></li>
-              <li><a href="#conteudos">Conteúdos</a></li>
-              <li><a href="#atendimento">Atendimento</a></li>
-              <li><a href="#entrar">Entrar</a></li>
-              <li><a href="#conheca" class="btn-menu">Conheça</a></li>
-          </ul>
-      </nav>
+    <div class="logo">
+      <img src="assets/img/logo.png" alt="Hotel Brisa Azul" style="height: 80px; vertical-align: middle;">Hotel Brisa Azul
+    </div>
+    <div class="menu-toggle" (click)="toggleMenu()">☰</div>
+
+    <nav id="menu" [class.nav]="true" [class.show]="menuAberto">
+      <ul class="nav-links">
+        <li><a href="#solucao">Início</a></li>
+        <li><a href="#conteudos">Quartos</a></li>
+        <li><a href="#atendimento">Experiências</a></li>
+        <li><a href="#entrar">Reservar</a></li>
+        <li><a href="#conheca" class="btn-menu">Contato</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
 <!-- HERO SECTION -->
 <section class="hero">
   <div class="hero-content">
-      <h1>Texto exemplo 2<br><span>Texto exempl 1</span></h1>
-      <p>aqui vai um texto de subtitulo</p>
-      <div class="buttons">
-          <a href="#" class="btn-outline">&#9658; Redirecionado para uma pop ub com vídeo</a>
-          <a href="#" class="btn-primary">Conheça</a>
-      </div>
+    <h1>Bem-vindo ao Hotel Brisa Azul</h1>
+    <p>Conforto, elegância e o melhor pôr do sol à sua janela.</p>
+    <div class="buttons">
+      <a href="#" class="btn-outline">&#9658; Ver vídeo</a>
+      <a href="#" class="btn-primary">Reservar agora</a>
+    </div>
   </div>
-  <div class="hero-image">
-    <img src="assets/img/image1.png" alt="Tablet" />
+
+  <div id="heroCarousel" class="carousel slide hero-image" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/img/quarto.png" class="d-block w-100" alt="Vista da piscina do hotel">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/recepcao.png" class="d-block w-100" alt="Recepção do hotel">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/lazer.png" class="d-block w-100" alt="Recepção do hotel">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
   </div>
 </section>
 
 <!-- SEÇÃO: CONHEÇA A PRECISÃO -->
-<section class="precisao ">
-  <h2>Conheça a Precisão</h2>
-  <p class="sub">texto que você deseja adicionar</p>
-  <img src="assets/img/image2.png" alt="Notebook com sistema" class="imagem-notebook" style="width: 700px">
+<section class="precisao">
+  <h2>Conforto em cada detalhe</h2>
+  <p class="sub">Descanse em nossas suítes com ar-condicionado, TV Smart e camas king size.</p>
+  <img src="assets/img/hotel.png" alt="Quarto de hotel" class="imagem-notebook" style="width: 100%; max-width: 700px">
   <div class="blocos">
-      <div class="bloco">
-          <h3>texto que você deseja adicionar</h3>
-          <p>texto que você deseja adicionar</p>
-      </div>
-      <div class="bloco">
-          <h3></h3>
-          <p>texto que você deseja adicionar</p>
-      </div>
-      <div class="bloco">
-          <h3>texto que você deseja adicionar</h3>
-          <p>texto que você deseja adicionar</p>
-      </div>
+    <div class="bloco">
+      <h3>Wi-Fi gratuito</h3>
+      <p>Internet rápida e estável em todos os ambientes.</p>
+    </div>
+    <div class="bloco">
+      <h3>Piscina com vista</h3>
+      <p>Relaxe com vista para o mar e serviço de bar exclusivo.</p>
+    </div>
+    <div class="bloco">
+      <h3>Gastronomia</h3>
+      <p>Sabores regionais e internacionais no nosso restaurante premiado.</p>
+    </div>
   </div>
 </section>
-<!-- SEÇÃO: ASSUMA SEU PROTAGONISMO -->
-<section class="protagonismo">
-  <h2>texto que você deseja adicionar</h2>
-  <p class="sub">texto que você deseja adicionar</p>
-  <img src="assets/img/Astronauta.png" alt="Mascote Mister Contador" class="mascote-img masfoguete" />
+
+<!-- SEÇÃO: DEPOIMENTOS -->
+<!-- <section class="protagonismo">
+  <h2>O que dizem nossos hóspedes</h2>
+  <p class="sub">Avaliações reais de quem viveu a experiência Brisa Azul.</p>
+  <img src="assets/img/Astronauta.png" alt="Mascote Hotel" class="mascote-img masfoguete" />
   <div class="depoimentos">
-      <div class="depoimento">
-          <p>"Nossa produtividade aumentou em 60% depois que passamos a usar o Mister!"</p>
-          <span>Lucas, Contador</span>
-      </div>
-      <div class="depoimento">
-          <p>"Consigo lançar um mês inteiro de movimento em menos de 10 minutos."</p>
-          <span>Ana Paula, Escritório SP</span>
-      </div>
-      </div>
-</section>
-<!-- SEÇÃO: PERFORMANCE CONTÁBIL -->
+    <div class="depoimento">
+      <p>"Uma experiência única! Atendimento impecável e vista deslumbrante."</p>
+      <span>Lucas, São Paulo</span>
+    </div>
+    <div class="depoimento">
+      <p>"Voltarei com certeza. O quarto era espaçoso e super limpo."</p>
+      <span>Ana Paula, Rio de Janeiro</span>
+    </div>
+  </div>
+</section> -->
+
+<!-- SEÇÃO: BENEFÍCIOS -->
 <section class="performance">
-  <h2>texto que você deseja adicionar</h2>
-  <p class="sub">texto que você deseja adicionar</p>
+  <h2>Mais que um hotel</h2>
+  <p class="sub">Serviços e facilidades que fazem a diferença na sua estada.</p>
   <div class="blocos-performance">
-  <div class="bloco-perf">texto que você deseja adicionar</div>
-  <div class="bloco-perf">texto que você deseja adicionar</div>
-  <div class="bloco-perf central">
-      <strong>texto que você deseja adicionar</strong><br>texto que você deseja adicionar texto que você deseja adicionar
-  </div>
-  <div class="bloco-perf">texto que você deseja adicionar</div>
-  <div class="bloco-perf">texto que você deseja adicionar</div>
+    <div class="bloco-perf">Estacionamento gratuito</div>
+    <div class="bloco-perf">Pet Friendly</div>
+    <div class="bloco-perf central">
+      <strong>Atendimento 24h</strong><br>Equipe sempre pronta para te ajudar.
+    </div>
+    <div class="bloco-perf">Transfer para aeroporto</div>
+    <div class="bloco-perf">Spa e massagem</div>
   </div>
 </section>
+
 <!-- SEÇÃO: CHAMADA TABLET -->
 <section class="chamada-tablet">
-<div class="texto">
-<h2>texto que você deseja adicionar</h2>
-<p>texto que você deseja adicionar texto que você deseja adicionar</p>
-<a href="#" class="btn-primary">texto que você deseja adicionar</a>
-</div>
-<div class="imagem">
-  <img src="/assets/img/tablet.png" alt="Tablet"></div>
+  <div class="texto">
+    <h2>Pronto para sua próxima viagem?</h2>
+    <p>Garanta já sua reserva com condições especiais de lançamento.</p>
+    <a href="#" class="btn-primary">Reservar agora</a>
+  </div>
+  <div class="imagem">
+    <img src="/assets/img/tablet.png" alt="Tablet">
+  </div>
 </section>
+
+<!-- FAQ -->
 <section class="faq">
-<h2>texto que você deseja adicionar</h2>
-<div class="faq-item">
-<button class="faq-question">texto que você deseja adicionar texto que você deseja adicionar<span>+</span></button>
-<div class="faq-answer">
-  <p>texto que você deseja adicionar</p>
-</div>
-</div>
-<div class="faq-item">
-<button class="faq-question">texto que você deseja adicionar<span>+</span></button>
-<div class="faq-answer">
-  <p>texto que você deseja adicionar texto que você deseja adicionar</p>
-</div>
-</div>
-<div class="faq-item">
-<button class="faq-question">texto que você deseja adicionar<span>+</span></button>
-<div class="faq-answer">
-  <p>texto que você deseja adicionar</p>
-</div>
-</div>
+  <h2>Dúvidas Frequentes</h2>
+  <div class="faq-item">
+    <button class="faq-question">Qual o horário de check-in e check-out?<span>+</span></button>
+    <div class="faq-answer">
+      <p>Check-in a partir das 14h e check-out até as 12h.</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question">O hotel aceita pets?<span>+</span></button>
+    <div class="faq-answer">
+      <p>Sim! Somos pet friendly.</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question">Possui estacionamento gratuito?<span>+</span></button>
+    <div class="faq-answer">
+      <p>Sim, incluso na diária.</p>
+    </div>
+  </div>
 </section>
+
+<!-- FOOTER -->
 <footer class="rodape">
-<div class="rodape-conteudo">
-<div class="newsletter">
-  <h3>📩 Esteja sempre a frente!</h3>
-  <p>Assine nossa Newsletter gratuita e receba conteúdos exclusivos de como otimizar sua operação contábil.</p>
-</div>
+  <div class="rodape-conteudo">
+    <div class="newsletter">
+      <h3>📩 Receba novidades</h3>
+      <p>Assine nossa Newsletter e fique por dentro de ofertas e eventos.</p>
+    </div>
 
-<div class="rodape-links">
-  <div class="coluna">
-    <h4>Páginas</h4>
-    <ul>
-      <li><a href="#">Início</a></li>
-      <li><a href="#">Solução</a></li>
-      <li><a href="#">Integrações</a></li>
-    </ul>
+    <div class="rodape-links">
+      <div class="coluna">
+        <h4>Hotel</h4>
+        <ul>
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Quartos</a></li>
+          <li><a href="#">Gastronomia</a></li>
+        </ul>
+      </div>
+      <div class="coluna">
+        <h4>Ajuda</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Perguntas Frequentes</a></li>
+        </ul>
+      </div>
+      <div class="coluna">
+        <h4>Contato</h4>
+        <p>reservas@brisazulhotel.com<br>+55 (11) 4002-8922</p>
+      </div>
+    </div>
   </div>
-  <div class="coluna">
-    <h4>Páginas</h4>
-    <ul>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Ajuda</a></li>
-    </ul>
-  </div>
-  <div class="coluna">
-    <h4>Contato</h4>
-    <p>Comercial • Suporte • Financeiro</p>
-    <p>texto que você deseja adicionar<br>texto que você deseja adicionar</p>
-  </div>
-</div>
-</div>
 
-<div class="rodape-inferior">
-<p>&copy;texto que você deseja adicionar - 2025 • Todos os direitos reservados</p>
-<p>texto que você deseja adicionar</p>
-</div>
+  <div class="rodape-inferior">
+    <p>&copy; Hotel Brisa Azul - 2025 • Todos os direitos reservados</p>
+    <p>Feito com ❤ para viajantes como você.</p>
+  </div>
 </footer>

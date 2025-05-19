@@ -7,6 +7,12 @@ import { AfterViewInit, Component } from '@angular/core';
 })
 export class AppComponent implements AfterViewInit {
 
+  menuAberto = false; // ✅ Agora existe!
+
+  toggleMenu() {
+    this.menuAberto = !this.menuAberto;
+  }
+
   ngAfterViewInit(): void {
     // Script do FAQ
     const perguntas = document.querySelectorAll('.faq-question');
@@ -16,5 +22,5 @@ export class AppComponent implements AfterViewInit {
         item?.classList.toggle('active');
       });
     });
-  }    
+  }
 }
